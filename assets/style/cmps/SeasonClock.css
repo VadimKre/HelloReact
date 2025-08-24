@@ -1,0 +1,20 @@
+.season-clock-section {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    max-width: 300px;
+    min-width: 250px;
+    align-items: center;
+    color: var(--lightThemeText);
+    background-color: var(--lightThemeBackground);
+}
+
+.dark-theme {
+    background-color: var(--darkThemeBackground);
+    color: var(--darkThemeText);
+}
+
+/* .season-clock-month {
+    display: ;
+} */

@@ -2,8 +2,6 @@
 
 export function AnimalList ({animalList}){
 
-    animalList.map((animal) => {console.log('animal.type:', animal.type)})
-
     return(
         <section className="animal-section">
             <h2>Rare Animals</h2>

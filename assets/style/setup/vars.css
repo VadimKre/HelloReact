@@ -11,4 +11,10 @@
   --gray2: rgb(155, 155, 155);
   --gray3: rgb(44, 44, 44);
 
+  --lightThemeText: #000000;
+  --darkThemeText: #ffffff;
+  --darkThemeBackground: #1a008c;
+  --lightThemeBackground: #4c9bda;
+
+
 } 

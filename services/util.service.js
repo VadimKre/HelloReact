@@ -6,7 +6,8 @@ export const utilService = {
     getRandomIntInclusive,
     getDayName,
     getMonthName,
-    animateCSS
+    animateCSS,
+    getSeason
 }
 
 function makeId(length = 6) {
@@ -55,7 +56,21 @@ function getMonthName(date) {
     const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
         'July', 'August', 'September', 'October', 'November', 'December'
     ]
+    date = new Date(date)
     return monthNames[date.getMonth()]
+}
+
+function getSeason(month) {
+    const seasons = [
+                        {'Winter': ['December','January', 'February']}, 
+                        {'Spring': ['March', 'April', 'May']} , 
+                        {'Summer': ['June','July', 'August']}, 
+                        {'Autumn': ['September', 'October', 'November']}
+                    ]
+
+    const season = seasons.find( season => Object.values(season)[0].some( m => m === month))
+    return Object.keys(season)[0]
+
 }
 
 function animateCSS(el, animation='bounce') {
