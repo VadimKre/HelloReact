@@ -8,6 +8,7 @@
     align-items: center;
     color: var(--lightThemeText);
     background-color: var(--lightThemeBackground);
+    user-select: none;
 }
 
 .dark-theme {

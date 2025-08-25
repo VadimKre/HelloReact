@@ -16,21 +16,14 @@ export function SeasonClock (){
 
 
     useEffect( () => {
-        console.log('test12')
-        intervalID.current = setInterval( () => setTimer( timer => timer + 1), 1000)
+        intervalID.current = setInterval( () => setTimer( timer => timer + 1 ), 1000)
 
         return () => clearInterval(intervalID.current)
     }, [])
 
 
-    useEffect( () => {
-        console.log('timer')
-        console.log('Date.now(): ', Date.now())
-    }, [timer])
-
-
     function onClick() {
-        setIsDark(isDark => !isDark )
+        setIsDark(isDark => !isDark)
     }
 
     return(
