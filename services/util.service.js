@@ -7,7 +7,8 @@ export const utilService = {
     getDayName,
     getMonthName,
     animateCSS,
-    getSeason
+    getSeason,
+    getRandomSubset
 }
 
 function makeId(length = 6) {
@@ -86,4 +87,13 @@ function animateCSS(el, animation='bounce') {
 
         el.addEventListener('animationend', handleAnimationEnd, { once: true })
     })
+}
+
+function getRandomSubset(arr, k) {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy.slice(0, k);
 }
