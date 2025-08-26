@@ -38,8 +38,6 @@ export function WatcherApp() {
                 setWatchers( w => [...w, watcher])
                 closeAdd()
             })
-             
-
     }
 
     function onChange(e) {
