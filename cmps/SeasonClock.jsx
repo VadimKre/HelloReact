@@ -29,7 +29,7 @@ export function SeasonClock (){
     return(
         <div className={"season-clock-section" + (isDark ? ' dark-theme' : '')} onClick={onClick}>
             <h3 className='season-clock-month'>{ monthName + '(' + season + ')'}</h3>
-            <img className='season-clock-img' src={'../assets/img/' + imgToDisplay} alt="season-img" />
+            <img className='season-clock-img' src={'./assets/img/' + imgToDisplay} alt="season-img" />
             <h4 className='season-clock-day'> { dayName }</h4>
         </div>
     )

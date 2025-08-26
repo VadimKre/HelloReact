@@ -66,7 +66,7 @@ export function WatcherApp() {
                 { watchers.map( (watcher) => {
                     return(
                         <div className='watcher-container'>
-                            <img className='watcher-app-img' src="../assets/img/avatar.png" alt="" />
+                            <img className='watcher-app-img' src="./assets/img/avatar.png" alt="" />
                             <h3 className='watcher-app-name'>{watcher.name}</h3>
                             <div className='watcher-app-buttons-container'>
                                 <button onClick={(e) => onRemove(e,watcher)} className='watcher-app-close-button'>x</button>
