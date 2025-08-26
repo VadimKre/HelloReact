@@ -63,14 +63,14 @@ export function WatcherApp() {
         <div className='watcher-app-section'>
             <button className='watcher-add-button' onClick={() => showAddWatcherModal()}>Add a Watcher</button>
             <div className='watcher-container-outer'>
-                { watchers.map( (watcher) => {
+                { watchers.map( (watcher, i) => {
                     return(
-                        <div className='watcher-container'>
-                            <img className='watcher-app-img' src="./assets/img/avatar.png" alt="" />
-                            <h3 className='watcher-app-name'>{watcher.name}</h3>
-                            <div className='watcher-app-buttons-container'>
-                                <button onClick={(e) => onRemove(e,watcher)} className='watcher-app-close-button'>x</button>
-                                <button onClick={() => onSelect(watcher)} className='watcher-app-select-button'>Select</button>
+                        <div key={watcher + i + 'div'} className='watcher-container'>
+                            <img key={watcher + i + 'img'} className='watcher-app-img' src="./assets/img/avatar.png" alt="" />
+                            <h3 key={watcher + i + 'name'} className='watcher-app-name'>{watcher.name}</h3>
+                            <div key={watcher + i + 'container'} className='watcher-app-buttons-container'>
+                                <button key={watcher + i + 'button1'} onClick={(e) => onRemove(e,watcher)} className='watcher-app-close-button'>x</button>
+                                <button key={watcher + i + 'button2'} onClick={() => onSelect(watcher)} className='watcher-app-select-button'>Select</button>
                             </div>
                         </div>
                     )
